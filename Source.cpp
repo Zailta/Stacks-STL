@@ -3,7 +3,7 @@ using namespace std;
 
 void print(stack <int> st) {
     while (!st.empty()) {
-        cout << st.top << endl;
+        cout << st.top() << endl;
         st.pop();
     }
 }
