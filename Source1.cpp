@@ -1,4 +1,4 @@
-code for infix to prefix using Stl
+// code for infix to prefix using Stl
 #include<bits/stdc++.h> 
 using namespace std;
 
@@ -53,6 +53,7 @@ void infixToPostfix(string s) {
         ns += c;
 
     }
+   // this is where the magic happens 
     reverse(ns.begin(), ns.end());
     cout << ns << endl;
 
