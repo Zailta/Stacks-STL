@@ -52,7 +52,7 @@ void infixToPostfix(string s) {
         ns += c;
 
     }
-    reverse(ns.begin(), ns.end());
+   
     cout << ns << endl;
 
 }
