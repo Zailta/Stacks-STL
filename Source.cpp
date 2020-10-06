@@ -19,7 +19,7 @@ void infixToPostfix(string s) {
 
     //checking for the character value in the stack
     for (int i = 0; i < l; i++) {
-        if (s[i] > 'a' && s[i] < 'z' || s[i]>'A' && s[i] < 'Z')
+        if (s[i] >= 'a' && s[i] <= 'z' || s[i] >= 'A' && s[i] <= 'Z')
             ns = ns + s[i];
         else if (s[i] == '(')
             st.push('(');
@@ -37,7 +37,7 @@ void infixToPostfix(string s) {
 
         //now check priority of the operator;
         else {
-            if (st.top() != 'N' && priority(s[i]) <= priority(st.top())) {
+            while (st.top() != 'N' && priority(s[i]) <= priority(st.top())) {
                 char c = st.top();
                 st.pop();
                 ns += c;
@@ -52,6 +52,7 @@ void infixToPostfix(string s) {
         ns += c;
 
     }
+    reverse(ns.begin(), ns.end());
     cout << ns << endl;
 
 }
